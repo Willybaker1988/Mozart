@@ -54,7 +54,7 @@ services:
     command: webserver
     # this mounts the
     volumes:
-      - ./Mozart/dags:/usr/local/airflow/dags
+      - ./dags:/usr/local/airflow/dags
 
 networks:
   airflow-net:

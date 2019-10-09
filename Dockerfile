@@ -68,10 +68,10 @@ RUN set -ex \
 COPY requirements.txt ${AIRFLOW_HOME}/requirements.txt
 RUN pip install -r ${AIRFLOW_HOME}/requirements.txt
 
-COPY script/entrypoint.sh /entrypoint.sh
+COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
-COPY config/airflow.cfg ${AIRFLOW_HOME}/airflow.cfg
+COPY airflow.cfg ${AIRFLOW_HOME}/airflow.cfg
 
 RUN chown -R airflow: ${AIRFLOW_HOME}
 
